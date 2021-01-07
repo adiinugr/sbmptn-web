@@ -84,7 +84,7 @@ const home = () => {
                 Social Network Management
               </h1>
               <button className="bg-green-500t px-6 md:px-8 py-3 md:py-4 text-lg md:text-xl text-secondary font-bold uppercase rounded hover:bg-primary-400">
-                More info Bos
+                More info
               </button>
             </div>
             <div className="mt-16 sm:mt-0 flex-1 flex justify-end">
