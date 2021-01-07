@@ -83,7 +83,7 @@ const home = () => {
               <h1 className="text-4xl md:text-5xl font-bold text-secondary leading-tight mb-6 md:mb-10">
                 Social Network Management
               </h1>
-              <button className="bg-green-500 px-6 md:px-8 py-3 md:py-4 text-lg md:text-xl text-secondary font-bold uppercase rounded hover:bg-primary-400">
+              <button className="bg-green-500t px-6 md:px-8 py-3 md:py-4 text-lg md:text-xl text-secondary font-bold uppercase rounded hover:bg-primary-400">
                 More info
               </button>
             </div>
