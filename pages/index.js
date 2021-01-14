@@ -21,9 +21,9 @@ const HomeScreen = () => {
               </button>
             </div>
             <div className="hidden lg:flex items-center">
-              <button className="px-4 py-2 hover:text-indigo-600">Login</button>
-              <button className="px-4 py-2 bg-green-500 text-white hover:bg-green-600 rounded">
-                Sign Up
+              {/* <button className="px-4 py-2 hover:text-indigo-600">Login</button> */}
+              <button className="px-4 py-2 bg-green-600 text-white hover:bg-green-600 rounded">
+                Log In
               </button>
             </div>
             <button className="px-4 py-2  lg:hidden">Hamburger</button>
@@ -49,7 +49,7 @@ const HomeScreen = () => {
                 rerum blanditiis iure voluptate veniam deleniti eius? Odio
                 deleniti minima totam et ab.
               </p>
-              <button className="bg-green-500 text-white px-5 md:px-4 py-4 md:py-3 rounded hover:bg-green-600">
+              <button className="bg-green-600 text-white px-5 md:px-4 py-4 md:py-3 rounded hover:bg-green-600">
                 More info
               </button>
             </div>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Countdown from "react-countdown";
 
 const quizzes = [
@@ -33,7 +33,7 @@ const Test = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [currentAnswer] = useState([]);
   const [isRagu] = useState([]);
-  const time = 10000;
+  const [date] = useState(Date.now() + 20000);
 
   const prevButtonHandler = () => {
     if (currentQuestion === 0) {
@@ -114,15 +114,17 @@ const Test = () => {
 
   return (
     <div className="lg:bg-gray-100 h-screen">
-      <div className="bg-indigo-400 flex items-center justify-between px-8 text-white w-full header shadow-sm p-3">
-        <div className="font-medium">Adi Nugroho</div>
-        <div className="font-medium">Try Out Skolastik Kuantitatif 1</div>
+      <div className="bg-green-600 flex items-center justify-between px-8 text-white w-full header shadow-sm p-3">
+        <div className="font-medium hidden lg:flex">Adi Nugroho</div>
+        <div className="font-medium text-center lg:text-left">
+          Try Out Skolastik Kuantitatif 1 Bla Masyarakat Indonesia
+        </div>
         <div className=""></div>
       </div>
       <div className="lg:flex content p-3">
         <div className="lg:w-3/4 flex flex-col mb-4 lg:mb-0 justify-between bg-white h-full p-5 rounded-md">
           <div>
-            <div className="font-medium mb-3">
+            <div className="font-semibold border-b border-gray-200 pb-2 mb-3">
               Pertanyaan {currentQuestion + 1}
             </div>
             <div className="mb-4">{quizzes[currentQuestion].question}</div>
@@ -147,14 +149,14 @@ const Test = () => {
             <div className="flex justify-between">
               <div className="my-3">
                 <button
-                  className="bg-indigo-500 text-white mt-2  disabled:opacity-50 rounded-md px-2 py-1 lg:px-3 lg:py-2 mr-2"
+                  className="bg-gray-500 text-white mt-2  disabled:opacity-50 rounded-md px-2 py-1 lg:px-3 lg:py-2 mr-2"
                   onClick={prevButtonHandler}
                   disabled={currentQuestion === 0}
                 >
                   Prev
                 </button>
                 <button
-                  className="bg-indigo-500 text-white  mt-2 disabled:opacity-50 rounded-md px-2 py-1 lg:px-3 lg:py-2 mr-4"
+                  className="bg-gray-500 text-white  mt-2 disabled:opacity-50 rounded-md px-2 py-1 lg:px-3 lg:py-2 mr-4"
                   onClick={nextButtonHandler}
                   disabled={currentQuestion === quizzes.length - 1}
                 >
@@ -175,7 +177,7 @@ const Test = () => {
               </div>
               <div className="my-3">
                 <button
-                  className="bg-green-600 text-white rounded-md px-2 py-1 lg:px-3 lg:py-2"
+                  className="bg-green-600 text-white mt-2 rounded-md px-2 py-1 lg:px-3 lg:py-2"
                   onClick={handleSubmitTest}
                 >
                   Akhiri Test
@@ -199,11 +201,11 @@ const Test = () => {
           </div>
         </div>
         <div className="lg:w-1/4 lg:ml-3 bg-white rounded-md overflow-hidden">
-          <div className="font-medium bg-indigo-400 px-3 py-2 text-white">
+          <div className="font-medium bg-green-600 px-3 py-2 text-white">
             Waktu Tersisa
           </div>
-          <Countdown date={Date.now() + time} renderer={timerRenderer} />
-          <div className="font-medium border-b-2 px-3 py-2 bg-indigo-400 text-white">
+          <Countdown date={date} renderer={timerRenderer} />
+          <div className="font-medium border-b-2 px-3 py-2 bg-green-600 text-white">
             Nomer Soal
           </div>
           <div className="p-4 grid grid-cols-6 gap-4">
